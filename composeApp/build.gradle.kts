@@ -48,6 +48,8 @@ kotlin {
             implementation(libs.ktor.client.content.negotiation)
             //implementation(libs.kotlinx.serialization.json)
             implementation(libs.ktor.serialization.kotlinx.json)
+
+            implementation(libs.kamel.image.default)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

@@ -28,6 +28,9 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.kotlinmultiplatformdemo.data.repositories.PhotosRepository
+import com.example.kotlinmultiplatformdemo.data.services.PhotosApiService
+import com.example.kotlinmultiplatformdemo.domain.interfaces.IPhotosRepository
 import com.example.kotlinmultiplatformdemo.domain.models.PhotoModel
 import com.example.kotlinmultiplatformdemo.ui.viewmodels.PhotosViewModel
 import io.kamel.image.KamelImage
@@ -35,14 +38,16 @@ import io.kamel.image.asyncPainterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
-fun PhotosView(viewModel: PhotosViewModel) {
+fun PhotosView(
+    viewModel: PhotosViewModel
+) {
     LaunchedEffect(Unit) {
         viewModel.getPhotos()
     }
 
     val photos = remember { viewModel.photos }
 
-    PhotosView(
+    PhotosViewContent(
         photos = photos
     )
 }
@@ -50,7 +55,7 @@ fun PhotosView(viewModel: PhotosViewModel) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun PhotosView(
+fun PhotosViewContent(
     photos: List<PhotoModel>
 ) {
 
@@ -118,7 +123,7 @@ fun PhotosView(
 @Composable
 @Preview(showBackground = true)
 fun PhotosViewPreview() {
-    PhotosView(
+    PhotosViewContent(
         photos = listOf(
             PhotoModel(
                 url = "composeApp/src/commonMain/composeResources/images/animal.jpg",

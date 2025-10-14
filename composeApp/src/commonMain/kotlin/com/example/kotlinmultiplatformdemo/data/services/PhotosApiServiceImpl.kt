@@ -7,7 +7,9 @@ import io.ktor.client.call.body
 import io.ktor.client.request.get
 import io.ktor.http.HttpStatusCode
 
-class PhotosApiServiceImpl() : PhotosApiService {
+class PhotosApiServiceImpl(
+    private val httpClient: HttpClient
+) : PhotosApiService {
     override suspend fun fetchPhotos(): PhotosResponse? {
         val response = httpClient.get("https://api.slingacademy.com/v1/sample-data/photos")
         return when {

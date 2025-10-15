@@ -1,32 +1,17 @@
 package com.example.kotlinmultiplatformdemo
 
-import androidx.compose.runtime.remember
 import androidx.compose.ui.window.ComposeUIViewController
-import com.example.kotlinmultiplatformdemo.data.repositories.PhotosRepository
-import com.example.kotlinmultiplatformdemo.data.services.PhotosApiServiceImpl
+import com.example.kotlinmultiplatformdemo.di.appModule
 import com.example.kotlinmultiplatformdemo.ui.views.PhotosView
 import com.example.kotlinmultiplatformdemo.ui.viewmodels.PhotosViewModel
-import io.ktor.client.HttpClient
-import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
-import io.ktor.serialization.kotlinx.json.json
-import kotlinx.serialization.json.Json
+import org.koin.compose.KoinApplication
+import org.koin.compose.koinInject
 
 fun MainViewController() = ComposeUIViewController {
-    val viewModel = remember {
-        val httpClient = HttpClient {
-            install(ContentNegotiation) {
-                json(
-                    Json {
-                        prettyPrint = true
-                        isLenient = true
-                        ignoreUnknownKeys = true
-                    }
-                )
-            }
-        }
-        val photosApiService = PhotosApiServiceImpl(httpClient)
-        val photosRepository = PhotosRepository(photosApiService)
-        PhotosViewModel(photosRepository)
+    KoinApplication(application = {
+        modules(appModule)
+    }) {
+        val viewModel = koinInject<PhotosViewModel>()
+        PhotosView(viewModel)
     }
-    PhotosView(viewModel)
 }

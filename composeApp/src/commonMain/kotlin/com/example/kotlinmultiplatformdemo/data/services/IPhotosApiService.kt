@@ -1,9 +1,8 @@
 package com.example.kotlinmultiplatformdemo.data.services
 
-import com.example.kotlinmultiplatformdemo.data.models.Photo
 import com.example.kotlinmultiplatformdemo.data.models.PhotosResponse
 
-interface PhotosApiService {
+interface IPhotosApiService {
 
     suspend fun fetchPhotos(): PhotosResponse?
 

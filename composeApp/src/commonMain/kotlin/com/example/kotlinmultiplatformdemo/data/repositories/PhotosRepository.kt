@@ -1,12 +1,12 @@
 package com.example.kotlinmultiplatformdemo.data.repositories
 
-import com.example.kotlinmultiplatformdemo.data.services.PhotosApiService
+import com.example.kotlinmultiplatformdemo.data.services.IPhotosApiService
 import com.example.kotlinmultiplatformdemo.domain.interfaces.IPhotosRepository
 import com.example.kotlinmultiplatformdemo.domain.models.PhotoModel
 import kotlin.collections.emptyList
 
 class PhotosRepository(
-    private val api: PhotosApiService
+    private val api: IPhotosApiService
 ) : IPhotosRepository {
     override suspend fun getAllPhotos(): List<PhotoModel> {
         return try {

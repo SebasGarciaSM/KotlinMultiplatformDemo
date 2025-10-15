@@ -31,6 +31,9 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.ktor.client.cio)
+            // Koin
+            implementation("io.insert-koin:koin-android:3.5.6")
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -43,16 +46,20 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
             implementation(libs.ktor.client.core)
-            implementation(libs.ktor.client.cio)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
 
             implementation(libs.kamel.image.default)
+            
+            // Koin
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
         iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
     }
 }

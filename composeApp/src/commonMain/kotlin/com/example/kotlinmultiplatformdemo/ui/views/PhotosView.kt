@@ -28,9 +28,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.kotlinmultiplatformdemo.data.repositories.PhotosRepository
-import com.example.kotlinmultiplatformdemo.data.services.PhotosApiService
-import com.example.kotlinmultiplatformdemo.domain.interfaces.IPhotosRepository
 import com.example.kotlinmultiplatformdemo.domain.models.PhotoModel
 import com.example.kotlinmultiplatformdemo.ui.viewmodels.PhotosViewModel
 import io.kamel.image.KamelImage

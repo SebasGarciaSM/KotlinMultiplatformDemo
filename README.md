@@ -2,6 +2,12 @@
 
 This is a Kotlin Multiplatform (KMP) project that demonstrates how to build a functional application for both Android and iOS from a single, shared codebase. The application consumes a public API to fetch a list of photos and displays them in a user interface built with Compose Multiplatform.
 
+## Screenshots
+
+|                          Android                          |                        iOS                        |
+|:---------------------------------------------------------:|:-------------------------------------------------:|
+| ![Android Screenshot](screenshots/Android_screenshot.png) | ![iOS Screenshot](screenshots/iOS_screenshot.png) |
+
 ## Architecture and Design
 
 The project follows the principles of **Clean Architecture** combined with the **Model-View-ViewModel (MVVM)** pattern in the presentation layer. This architecture promotes a decoupled, scalable, and easily testable codebase.
@@ -23,7 +29,7 @@ The separation of concerns is organized into the following layers:
 
 The following diagram illustrates the dependency flow between the different layers and components of the project.
 
-![App Architecture Diagram](https://www.plantuml.com/plantuml/png/RP31IWCn48RlUOgn5zj3-mGYBUt1ea9Hy28z3Dc_xc0s2TbPfQZlBgIoTRCz_dzcFlBDibLEsZNEN6cD1XGTYpSgwa1h1_QqIhOMXTKkWJQ8y1My5RJ6HBRl_0QQx19QU6MLuEc1ZqWqxMGseIz3zBghWuRsHV2v7yR7KC7jpSy_qYOqB3sZokcF8rwH3cn1snFY2J6qeY4TXmXMxW6it7-ZMDeFcAVNLPHdf0-no1j5jssYomftgd7j15vfUgyXpRB4DMrm45zSwQnBy_aj5VQco7bcx6T65TryBnOq6YoBp1kvcR8vqqfVSwdCr4jNMC9NNUD-0G00)
+![App Architecture Diagram](http://www.plantuml.com/plantuml/png/VP1DRT8344Jx-HK52OflS4fM5V9oWDAkX5AAVaKe2gN5w0nNOCy75B0iXgZIIPIAYd5b4aB0y_VdE-9gLgO0FkG04cKlYI6p5zN2BfO-eKqgA6T0uL5vM0wJAYDq09-4yC9K-2V1M58GkXoXq5I3gAWWcIYE7h_o0bL1W-0uCjYtQEzcW_m_1-ZJ26Z6n_u-HAbvS0rUjJggO5V2Gj9gN2PqC6R2p_hUNs0l8s9c5m_u8_Nda2m40-41W2kf5-B8i5f75fT8E0uP)
 
 ---
 

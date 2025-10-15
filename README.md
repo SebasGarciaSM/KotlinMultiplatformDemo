@@ -6,7 +6,7 @@ This is a Kotlin Multiplatform (KMP) project that demonstrates how to build a fu
 
 |                          Android                          |                        iOS                        |
 |:---------------------------------------------------------:|:-------------------------------------------------:|
-| ![Android Screenshot](screenshots/Android_screenshot.png) | ![iOS Screenshot](screenshots/iOS_screenshot.png) |
+| <img src="screenshots/Android_screenshot.png" width="300"> | <img src="screenshots/iOS_screenshot.png" width="300"> |
 
 ## Architecture and Design
 
